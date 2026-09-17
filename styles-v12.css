@@ -150,3 +150,375 @@ footer{padding:3rem 8vw 4rem;border-top:1px solid var(--line);display:flex;align
 @media(max-width:560px){
   .portfolio-grid{display:block !important;}
 }
+
+
+/* ==============================
+   FATED VISUALS — V10
+   ============================== */
+
+.hero-actions-v10{
+  margin-top: 5.5rem !important;
+}
+
+/* Nueva galería: nunca recorta imágenes.
+   Cada fotografía conserva estrictamente su proporción original. */
+.portfolio-natural-grid{
+  margin-top: 3.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  align-items: start;
+}
+
+.portfolio-natural-item{
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  cursor: zoom-in;
+  align-self: start;
+}
+
+.portfolio-natural-item img{
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 1px solid rgba(243,238,227,.08);
+  filter: saturate(.88) contrast(1.02);
+  transition: filter .3s ease, opacity .3s ease;
+}
+
+.portfolio-natural-item:hover img{
+  transform: none !important;
+  filter: saturate(.98) contrast(1.04);
+  opacity: .96;
+}
+
+@media (max-width: 720px){
+  .hero-actions-v10{
+    margin-top: 4rem !important;
+  }
+  .portfolio-natural-grid{
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+}
+
+
+/* ===== FATED V11 ===== */
+.portfolio-natural-grid{
+  margin-top:3.8rem !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:1.35rem !important;
+  align-items:start !important;
+}
+.portfolio-natural-item{
+  appearance:none !important;
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  overflow:visible !important;
+  cursor:zoom-in !important;
+}
+.portfolio-natural-item img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:100% !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  border:1px solid rgba(243,238,227,.08);
+}
+.portfolio-natural-item:hover img{opacity:.94 !important;}
+
+.lightbox{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:9999 !important;
+  background:rgba(5,5,4,.96) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:3vw !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+  transition:opacity .2s ease !important;
+}
+.lightbox.open{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+}
+.lightbox img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:94vw !important;
+  max-height:90vh !important;
+  object-fit:contain !important;
+  box-shadow:0 25px 80px rgba(0,0,0,.5) !important;
+}
+.lightbox-close{
+  position:absolute !important;
+  top:1rem !important;
+  right:1.5rem !important;
+  z-index:10000 !important;
+  border:0 !important;
+  background:transparent !important;
+  color:#f3eee3 !important;
+  font-size:2.6rem !important;
+  cursor:pointer !important;
+}
+@media(max-width:720px){
+  .portfolio-natural-grid{grid-template-columns:1fr !important;gap:.95rem !important;}
+}
+
+
+/* ==============================
+   FATED VISUALS — V12 / PORTFOLIO POR SESIONES
+   ============================== */
+
+.session-portfolio{
+  margin-top:3.8rem;
+  display:grid;
+  gap:5.5rem;
+}
+
+.session-card{
+  display:grid;
+  gap:1.25rem;
+}
+
+.session-image-wrap{
+  position:relative;
+  width:100%;
+  background:#11110e;
+  border:1px solid rgba(243,238,227,.08);
+  overflow:hidden;
+}
+
+.session-open{
+  appearance:none;
+  border:0;
+  padding:0;
+  display:block;
+  width:100%;
+  background:transparent;
+  cursor:zoom-in;
+}
+
+.session-main-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:78vh;
+  object-fit:contain;
+  object-position:center;
+  background:#11110e;
+  transition:opacity .45s ease;
+}
+
+.session-main-image.is-changing{
+  opacity:.18;
+}
+
+.session-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid rgba(243,238,227,.35);
+  background:rgba(10,10,8,.52);
+  color:var(--cream);
+  font-size:2rem;
+  line-height:1;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  z-index:3;
+  backdrop-filter:blur(6px);
+}
+.session-prev{left:1rem}
+.session-next{right:1rem}
+
+.session-counter{
+  position:absolute;
+  right:1rem;
+  bottom:1rem;
+  z-index:3;
+  padding:.45rem .65rem;
+  border:1px solid rgba(243,238,227,.16);
+  background:rgba(10,10,8,.55);
+  color:var(--cream);
+  font-size:.68rem;
+  letter-spacing:.12em;
+}
+
+.session-meta{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:1.5rem;
+}
+
+.session-kicker{
+  margin:0 0 .45rem;
+  color:var(--gold);
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.session-meta h3{
+  margin:0;
+  font-size:clamp(2rem,4vw,4rem);
+  font-weight:400;
+}
+
+.session-view-all{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:var(--cream);
+  padding:.7rem 0;
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  cursor:pointer;
+  border-bottom:1px solid rgba(243,238,227,.35);
+}
+
+.session-dots{
+  display:flex;
+  gap:.55rem;
+  align-items:center;
+}
+
+.session-dots button{
+  width:34px;
+  height:3px;
+  padding:0;
+  border:0;
+  background:rgba(243,238,227,.22);
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.session-dots button.active{
+  background:var(--gold);
+  width:52px;
+}
+
+.session-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(5,5,4,.97);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+  padding:3vw;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .2s ease;
+}
+
+.session-lightbox.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.session-lightbox figure{
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.8rem;
+  max-width:min(86vw,1500px);
+}
+
+.session-lightbox img{
+  display:block;
+  max-width:86vw;
+  max-height:86vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+
+.session-lightbox-counter{
+  color:rgba(243,238,227,.72);
+  font-size:.72rem;
+  letter-spacing:.12em;
+}
+
+.session-lightbox-close,
+.session-lightbox-prev,
+.session-lightbox-next{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:var(--cream);
+  cursor:pointer;
+}
+
+.session-lightbox-close{
+  position:absolute;
+  top:1rem;
+  right:1.5rem;
+  font-size:2.8rem;
+  z-index:2;
+}
+
+.session-lightbox-prev,
+.session-lightbox-next{
+  font-size:3rem;
+  width:52px;
+  height:52px;
+}
+
+@media(max-width:720px){
+  .session-portfolio{gap:4rem}
+  .session-main-image{max-height:none}
+  .session-meta{align-items:start;flex-direction:column;gap:.8rem}
+  .session-arrow{width:42px;height:42px}
+  .session-lightbox{padding:1rem}
+  .session-lightbox-prev,
+  .session-lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:2;
+    background:rgba(10,10,8,.5);
+    border-radius:50%;
+  }
+  .session-lightbox-prev{left:.6rem}
+  .session-lightbox-next{right:.6rem}
+  .session-lightbox img{max-width:96vw;max-height:82vh}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .session-main-image{transition:none}
+}

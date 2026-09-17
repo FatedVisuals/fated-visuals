@@ -20,3 +20,6 @@ NOTAS
 - El correo configurado es fatedvisualscontact@gmail.com.
 - Instagram apunta a @fatedvisuals.
 - Para añadir fotografías después, sustituye los placeholders de la sección portfolio por <img> y guarda las imágenes dentro de /assets.
+
+
+V2: favicon actualizado y sección "Sobre mí" preparada. Sustituye assets/about-placeholder.svg por tu foto o, cuando la tengamos, usa assets/joaquin.jpg y actualiza el src en index.html.

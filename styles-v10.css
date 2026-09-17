@@ -150,3 +150,65 @@ footer{padding:3rem 8vw 4rem;border-top:1px solid var(--line);display:flex;align
 @media(max-width:560px){
   .portfolio-grid{display:block !important;}
 }
+
+
+/* ==============================
+   FATED VISUALS — V10
+   ============================== */
+
+.hero-actions-v10{
+  margin-top: 5.5rem !important;
+}
+
+/* Nueva galería: nunca recorta imágenes.
+   Cada fotografía conserva estrictamente su proporción original. */
+.portfolio-natural-grid{
+  margin-top: 3.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  align-items: start;
+}
+
+.portfolio-natural-item{
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  cursor: zoom-in;
+  align-self: start;
+}
+
+.portfolio-natural-item img{
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 1px solid rgba(243,238,227,.08);
+  filter: saturate(.88) contrast(1.02);
+  transition: filter .3s ease, opacity .3s ease;
+}
+
+.portfolio-natural-item:hover img{
+  transform: none !important;
+  filter: saturate(.98) contrast(1.04);
+  opacity: .96;
+}
+
+@media (max-width: 720px){
+  .hero-actions-v10{
+    margin-top: 4rem !important;
+  }
+  .portfolio-natural-grid{
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+}

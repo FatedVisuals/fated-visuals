@@ -8,14 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles-v14.css?v=14" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Fated Visuals, inicio">FATED <span>VISUALS</span></a>
     <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Principal">
-      <a href="#historia">La marca</a>
+      <a href="#historia">Sobre mí</a>
       <a href="#enfoque">Enfoque</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contacto">Contacto</a>
@@ -28,8 +30,7 @@
       <div class="hero-copy reveal">
         <p class="eyebrow">Fotografía cinematográfica de parejas · Madrid</p>
         <h1>Historias que estaban<br><em>destinadas a ser.</em></h1>
-        <p class="lead">Imágenes íntimas, naturales y con atmósfera. Fotografías que se sienten como un recuerdo de película.</p>
-        <div class="hero-actions">
+        <div class="hero-actions hero-actions-v10">
           <a class="btn primary" href="#contacto">Quiero una sesión</a>
           <a class="btn ghost" href="#enfoque">Descubrir Fated</a>
         </div>
@@ -39,12 +40,18 @@
       </div>
     </section>
 
-    <section id="historia" class="section split">
-      <div class="section-kicker">01 · Fated</div>
-      <div>
-        <h2>No busco poses perfectas.<br>Busco lo que pasa entre ellas.</h2>
-        <p>Fated Visuals nace con una idea sencilla: una historia de pareja no debería parecer una sesión de fotos, sino un fragmento de algo que ya existía antes de que llegara la cámara.</p>
-        <p>La dirección visual mezcla emoción, naturaleza, movimiento y una estética cinematográfica inspirada en escenas que podrían pertenecer a una película.</p>
+    <section id="historia" class="section about-section">
+      <div class="section-kicker">01 · Sobre mí</div>
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="assets/joaquin.jpg" alt="Retrato de Joaquín, fotógrafo detrás de Fated Visuals" />
+        </div>
+        <div class="about-copy">
+          <p class="about-eyebrow">Detrás de Fated Visuals</p>
+          <h2>Hola, soy Joaquín.</h2>
+          <p>Trabajo en el mundo audiovisual, y eso ha marcado mucho mi forma de mirar una imagen. Me fijo especialmente en la luz, el color, la composición y en cómo una escena puede contar algo por sí sola.</p>
+          <p>Fated Visuals nace de llevar esa forma de mirar a la fotografía de parejas. Me gustan las fotos naturales, con atmósfera y un punto cinematográfico, aprovechando la luz y el entorno para que cada sesión tenga su propia personalidad.</p>
+        </div>
       </div>
     </section>
 
@@ -60,14 +67,139 @@
     <section id="portfolio" class="section portfolio">
       <div class="section-kicker">03 · Portfolio</div>
       <div class="portfolio-intro">
-        <h2>El primer capítulo está a punto de empezar.</h2>
-        <p>Estoy construyendo las primeras historias de Fated Visuals. Esta galería irá creciendo con sesiones reales de pareja realizadas en Madrid y alrededores.</p>
+        <h2>Algunas historias, algunas miradas.</h2>
+        <p>Una primera selección de imágenes. El portfolio irá creciendo con nuevas sesiones y, sobre todo, con más historias de pareja.</p>
       </div>
-      <div class="gallery-placeholder" aria-label="Espacios reservados para futuras fotografías">
-        <div class="frame tall"><span>Próximamente</span></div>
-        <div class="frame"><span>Próximamente</span></div>
-        <div class="frame"><span>Próximamente</span></div>
-        <div class="frame wide"><span>Próximamente</span></div>
+
+      <div class="session-portfolio" aria-label="Sesiones de Fated Visuals">
+        <article class="session-card" data-session="atardecer">
+          <div class="session-image-wrap">
+            <button class="session-open" type="button" aria-label="Abrir la sesión Última luz completa">
+              <img class="session-main-image" src="assets/portfolio-v14/atardecer_01.jpeg" alt="Retrato sentado al atardecer" />
+            </button>
+            <button class="session-arrow session-prev" type="button" aria-label="Fotografía anterior">‹</button>
+            <button class="session-arrow session-next" type="button" aria-label="Fotografía siguiente">›</button>
+            <div class="session-counter" aria-live="polite">1 / 3</div>
+          </div>
+          <div class="session-meta">
+            <div>
+              <p class="session-kicker">Sesión · Retrato</p>
+              <h3>Última luz</h3>
+            </div>
+            <button class="session-view-all" type="button">Ver sesión completa</button>
+          </div>
+          <div class="session-dots" aria-label="Elegir fotografía de la sesión">
+            <button type="button" class="active" aria-label="Fotografía 1"></button>
+            <button type="button" aria-label="Fotografía 2"></button>
+            <button type="button" aria-label="Fotografía 3"></button>
+          </div>
+        </article>
+
+        <article class="session-card" data-session="ciudad">
+          <div class="session-image-wrap">
+            <button class="session-open" type="button" aria-label="Abrir la sesión Ciudad completa">
+              <img class="session-main-image" src="assets/portfolio-v14/ciudad_01.jpeg" alt="Retrato urbano con arquitectura histórica" />
+            </button>
+            <button class="session-arrow session-prev" type="button" aria-label="Fotografía anterior">‹</button>
+            <button class="session-arrow session-next" type="button" aria-label="Fotografía siguiente">›</button>
+            <div class="session-counter" aria-live="polite">1 / 4</div>
+          </div>
+          <div class="session-meta">
+            <div>
+              <p class="session-kicker">Sesión · Retrato</p>
+              <h3>Ciudad</h3>
+            </div>
+            <button class="session-view-all" type="button">Ver sesión completa</button>
+          </div>
+          <div class="session-dots" aria-label="Elegir fotografía de la sesión">
+            <button type="button" class="active" aria-label="Fotografía 1"></button>
+            <button type="button" aria-label="Fotografía 2"></button>
+            <button type="button" aria-label="Fotografía 3"></button>
+            <button type="button" aria-label="Fotografía 4"></button>
+          </div>
+        </article>
+
+        <article class="session-card" data-session="mar">
+          <div class="session-image-wrap">
+            <button class="session-open" type="button" aria-label="Abrir la sesión Mar completa">
+              <img class="session-main-image" src="assets/portfolio-v14/mar_01.jpeg" alt="Retrato en el mar al atardecer" />
+            </button>
+            <button class="session-arrow session-prev" type="button" aria-label="Fotografía anterior">‹</button>
+            <button class="session-arrow session-next" type="button" aria-label="Fotografía siguiente">›</button>
+            <div class="session-counter" aria-live="polite">1 / 3</div>
+          </div>
+          <div class="session-meta">
+            <div>
+              <p class="session-kicker">Sesión · Costa</p>
+              <h3>Mar</h3>
+            </div>
+            <button class="session-view-all" type="button">Ver sesión completa</button>
+          </div>
+          <div class="session-dots" aria-label="Elegir fotografía de la sesión">
+            <button type="button" class="active" aria-label="Fotografía 1"></button>
+            <button type="button" aria-label="Fotografía 2"></button>
+            <button type="button" aria-label="Fotografía 3"></button>
+          </div>
+        </article>
+
+        <article class="session-card" data-session="flamenco">
+          <div class="session-image-wrap">
+            <button class="session-open" type="button" aria-label="Abrir la sesión Escena completa">
+              <img class="session-main-image" src="assets/portfolio-v14/flamenco_01.jpeg" alt="Bailaora de flamenco sobre escenario" />
+            </button>
+            <button class="session-arrow session-prev" type="button" aria-label="Fotografía anterior">‹</button>
+            <button class="session-arrow session-next" type="button" aria-label="Fotografía siguiente">›</button>
+            <div class="session-counter" aria-live="polite">1 / 4</div>
+          </div>
+          <div class="session-meta">
+            <div>
+              <p class="session-kicker">Sesión · Flamenco</p>
+              <h3>Escena</h3>
+            </div>
+            <button class="session-view-all" type="button">Ver sesión completa</button>
+          </div>
+          <div class="session-dots" aria-label="Elegir fotografía de la sesión">
+            <button type="button" class="active" aria-label="Fotografía 1"></button>
+            <button type="button" aria-label="Fotografía 2"></button>
+            <button type="button" aria-label="Fotografía 3"></button>
+            <button type="button" aria-label="Fotografía 4"></button>
+          </div>
+        </article>
+
+        <article class="session-card" data-session="pareja">
+          <div class="session-image-wrap">
+            <button class="session-open" type="button" aria-label="Abrir la sesión Juntos completa">
+              <img class="session-main-image" src="assets/portfolio-v14/pareja_01.jpeg" alt="Pareja mirándose al atardecer" />
+            </button>
+            <button class="session-arrow session-prev" type="button" aria-label="Fotografía anterior">‹</button>
+            <button class="session-arrow session-next" type="button" aria-label="Fotografía siguiente">›</button>
+            <div class="session-counter" aria-live="polite">1 / 5</div>
+          </div>
+          <div class="session-meta">
+            <div>
+              <p class="session-kicker">Sesión · Pareja</p>
+              <h3>Juntos</h3>
+            </div>
+            <button class="session-view-all" type="button">Ver sesión completa</button>
+          </div>
+          <div class="session-dots" aria-label="Elegir fotografía de la sesión">
+            <button type="button" class="active" aria-label="Fotografía 1"></button>
+            <button type="button" aria-label="Fotografía 2"></button>
+            <button type="button" aria-label="Fotografía 3"></button>
+            <button type="button" aria-label="Fotografía 4"></button>
+            <button type="button" aria-label="Fotografía 5"></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="session-lightbox" aria-hidden="true">
+        <button class="session-lightbox-close" type="button" aria-label="Cerrar sesión">×</button>
+        <button class="session-lightbox-prev" type="button" aria-label="Fotografía anterior">‹</button>
+        <figure>
+          <img src="" alt="Fotografía ampliada" />
+          <figcaption class="session-lightbox-counter"></figcaption>
+        </figure>
+        <button class="session-lightbox-next" type="button" aria-label="Fotografía siguiente">›</button>
       </div>
     </section>
 
@@ -95,6 +227,6 @@
     <p>© <span id="year"></span> Fated Visuals · Madrid</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script-v14.js?v=14"></script>
 </body>
 </html>
