@@ -94,10 +94,6 @@ const sessions = {
       "alt": "Pareja abrazada con luz dorada"
     },
     {
-      "src": "assets/portfolio-v14/pareja_04.jpeg",
-      "alt": "Familia sentada con perro al atardecer"
-    },
-    {
       "src": "assets/portfolio-v14/pareja_05.jpeg",
       "alt": "Pareja caminando y bailando al atardecer"
     }
